@@ -5,6 +5,9 @@
   height: auto;
   overflow: hidden;
   flex-basis: 30%;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .content {

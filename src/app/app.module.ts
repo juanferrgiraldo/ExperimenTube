@@ -9,13 +9,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchService } from './services/search.service';
 import { VideoComponent } from './video/video.component';
 import { VideoCardComponent } from './video-card/video-card.component';
+import { PlayVideoComponent } from './play-video/play-video.component';
+import { SafeUrlPipe } from './safe-url.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     VideoComponent,
-    VideoCardComponent
+    VideoCardComponent,
+    PlayVideoComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,

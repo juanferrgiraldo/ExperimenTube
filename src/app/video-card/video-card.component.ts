@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./video-card.component.scss']
 })
 export class VideoCardComponent implements OnInit {
-  @Input() video;
+  @Input() video: any;
   constructor() { }
 
   ngOnInit() {

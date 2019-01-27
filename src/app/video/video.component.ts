@@ -9,8 +9,10 @@ import { log } from 'util';
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent implements OnInit {
-  @Input() searchVideoList;
-  @Input() shouldMount;
+  @Input() searchVideoList: any;
+  @Input() shouldMount: any;
+  currentVideo: {};
+  clickedVideo = false;
   constructor(private searchService: SearchService) { }
 
   ngOnInit() {
@@ -22,6 +24,12 @@ export class VideoComponent implements OnInit {
         }
       );
     }
+  }
+
+  setCurrentVideo(video) {
+    this.clickedVideo = true;
+    this.currentVideo = video;
+    console.log(this.currentVideo);
   }
 
 }
