@@ -1,3 +1,7 @@
-<p>
-  video works!
-</p>
+<div class="container mainnContainer">
+  <div class="row margin-top-20 margin-bottom-20">
+    <div class="col-xs-12 col-md-2" *ngFor="let video of searchVideoList">
+      <app-video-card [video]="video"></app-video-card>
+    </div>
+  </div>  
+</div>

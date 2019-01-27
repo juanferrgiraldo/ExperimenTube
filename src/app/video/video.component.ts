@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SearchService } from './../services/search.service';
+import { log } from 'util';
 
 
 @Component({
@@ -8,7 +9,6 @@ import { SearchService } from './../services/search.service';
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent implements OnInit {
-  trendVideoList = [];
   @Input() searchVideoList;
   @Input() shouldMount;
   constructor(private searchService: SearchService) { }
@@ -17,7 +17,8 @@ export class VideoComponent implements OnInit {
     if (!this.shouldMount) {
       this.searchService.trendingVideos().subscribe(
         results => {
-          this.trendVideoList = results;
+          this.searchVideoList = results;
+          console.log(this.searchVideoList);
         }
       );
     }

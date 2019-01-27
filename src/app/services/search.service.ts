@@ -13,7 +13,6 @@ export class SearchService {
     const params = new HttpParams().set('part', 'snippet').set('maxResults', '6').set('q', video).set('key', this.token);
     return this.httpClient.get<any>(this.url, {params}).pipe(
       map( results => {
-        console.log(results.items);
         return results.items;
       })
     );
@@ -23,7 +22,6 @@ export class SearchService {
     const params = new HttpParams().set('part', 'snippet').set('chart', 'mostPopular').set('regionCode', 'co').set('key', this.token);
     return this.httpClient.get<any>(this.url, {params}).pipe(
       map( results => {
-        console.log(results);
         return results.items;
       })
     );
