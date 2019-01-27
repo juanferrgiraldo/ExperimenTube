@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from './../services/search.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+  searchField = '';
+  videoList = [];
+  haveSearched = false;
+  constructor(private searchService: SearchService) { }
 
   ngOnInit() {
+  }
+
+  searchVideo() {
+    this.haveSearched = true;
+    this.searchService.searchVideo(this.searchField).subscribe(
+      results => {
+        this.videoList = results;
+        console.log(this.videoList);
+      }
+    );
   }
 
 }

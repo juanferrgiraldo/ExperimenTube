@@ -7,8 +7,14 @@
   </a>
   <div class="collapse navbar-collapse" id="navbarMenu">
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search video" aria-label="Search" [(ngModel)]="searchField" name="search">
       <i class="fas fa-search my-sm-0" (click)="searchVideo()"></i>
     </form>
   </div>
 </nav>
+<div *ngIf="haveSearched">
+  <app-video [shouldMount]="haveSearched" [searchVideoList]="videoList"></app-video>
+</div>
+<div *ngIf="!haveSearched">
+  <app-video [shouldMount]="haveSearched"></app-video>
+</div>
