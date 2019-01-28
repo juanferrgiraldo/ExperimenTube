@@ -1,8 +1,14 @@
-<div>
-  <div class="col-xs-12 col-md-6">
+<div class="row">
+  <div class="col-xs-12 col-md-7">
     <iframe id="player" type="text/html" width="640" height="390" [src]="url | safeUrl: url" frameborder="0" allowfullscreen></iframe>
   </div>
-  <div class="col-xs-12 col-md-6">
-    <p>{{video.snippet.description}}</p>
+  <div class="container col-xs-12 col-md-5">
+    <div class="row title">
+      <h3>{{video.snippet.title}}</h3>
+    </div>
+    <br>   
+    <div class="row description">
+      <p>{{video.snippet.description}}</p>
+    </div>    
   </div>
 </div>

@@ -1,25 +1,19 @@
+@import '../../styles/var';
+
 .video-card {
   border-radius: 2%;
   margin: 5px;
   max-width: 300px;
   height: auto;
   overflow: hidden;
-  flex-basis: 30%;
   &:hover {
     cursor: pointer;
   }
 }
 
-.content {
-  padding: 0 1rem 1rem ;
-  padding-bottom: 0.5rem;
-  hr{
-    margin-bottom: 0;
-  }
-}
-
 .title {
-  height: 44px;
+  font-family: $font-family;
+  height: 29px;
 }
 
 .picture {

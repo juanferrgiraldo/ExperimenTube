@@ -1,0 +1,28 @@
+@import '../../styles/var';
+
+.navbar {
+  background-color: $light-green;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: $font-family;
+
+  a {
+    color: $white;
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.searchButton {
+  border-radius: 6px;
+  background-color: $white;
+  color: $green;
+  &:hover {
+    cursor: pointer;
+    background-color: $white !important;
+    border-style: solid;
+    border-color: $green;
+    color: $gray;
+  }
+}

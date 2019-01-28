@@ -12,7 +12,7 @@ export class VideoComponent implements OnInit {
   @Input() searchVideoList: any;
   @Input() shouldMount: any;
   currentVideo: {};
-  clickedVideo = false;
+  mountedVideo = false;
   constructor(private searchService: SearchService) { }
 
   ngOnInit() {
@@ -20,6 +20,9 @@ export class VideoComponent implements OnInit {
       this.searchService.trendingVideos().subscribe(
         results => {
           this.searchVideoList = results;
+          this.currentVideo = this.searchVideoList[Math.floor(Math.random() * Math.floor(5))];
+          this.mountedVideo = true;
+          console.log(this.currentVideo);
           console.log(this.searchVideoList);
         }
       );
@@ -27,7 +30,7 @@ export class VideoComponent implements OnInit {
   }
 
   setCurrentVideo(video) {
-    this.clickedVideo = true;
+    this.mountedVideo = true;
     this.currentVideo = video;
     console.log(this.currentVideo);
   }

@@ -7,10 +7,10 @@ export class SearchService {
   constructor (private httpClient: HttpClient) { }
 
   url = 'https://www.googleapis.com/youtube/v3/search';
-  token = 'AIzaSyCHh9YbOFcP6-ZlSoh7D-FN35I0Aqx2LCE';
+  apiKey = 'AIzaSyBBL-nYWjHmqlPOCnPa3UEJhn66S0mKeyo';
 
   searchVideo(video) {
-    const params = new HttpParams().set('part', 'snippet').set('maxResults', '6').set('q', video).set('key', this.token);
+    const params = new HttpParams().set('part', 'snippet').set('maxResults', '6').set('q', video).set('key', this.apiKey);
     return this.httpClient.get<any>(this.url, {params}).pipe(
       map( results => {
         return results.items;
@@ -19,7 +19,7 @@ export class SearchService {
   }
 
   trendingVideos() {
-    const params = new HttpParams().set('part', 'snippet').set('chart', 'mostPopular').set('regionCode', 'co').set('key', this.token);
+    const params = new HttpParams().set('part', 'snippet').set('chart', 'mostPopular').set('regionCode', 'co').set('key', this.apiKey);
     return this.httpClient.get<any>(this.url, {params}).pipe(
       map( results => {
         return results.items;

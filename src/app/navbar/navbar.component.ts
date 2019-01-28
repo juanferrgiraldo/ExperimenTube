@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from './../services/search.service';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +9,7 @@ import { SearchService } from './../services/search.service';
 })
 export class NavbarComponent implements OnInit {
   searchField = '';
+  faSearch = faSearch;
   videoList = [];
   haveSearched = false;
   constructor(private searchService: SearchService) { }

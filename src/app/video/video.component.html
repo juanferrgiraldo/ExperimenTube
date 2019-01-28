@@ -4,7 +4,9 @@
       <app-video-card [video]="video" (click)="setCurrentVideo(video)"></app-video-card>
     </div>
   </div>
-  <div class="col-xs-12 col-md-12" *ngIf="clickedVideo">
-    <app-play-video [video]="currentVideo"></app-play-video>
-  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-12" *ngIf="mountedVideo">
+      <app-play-video [video]="currentVideo"></app-play-video>
+    </div>
+  </div>  
 </div>
