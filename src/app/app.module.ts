@@ -12,6 +12,7 @@ import { VideoComponent } from './video/video.component';
 import { VideoCardComponent } from './video-card/video-card.component';
 import { PlayVideoComponent } from './play-video/play-video.component';
 import { SafeUrlPipe } from './safe-url.pipe';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SafeUrlPipe } from './safe-url.pipe';
     VideoComponent,
     VideoCardComponent,
     PlayVideoComponent,
-    SafeUrlPipe
+    SafeUrlPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

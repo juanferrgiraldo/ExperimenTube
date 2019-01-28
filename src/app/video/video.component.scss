@@ -1,9 +1,14 @@
-.mainContainer{
-	padding-top: 30px;
+@import '../../styles/var';
+
+.main-container {
+	padding-top: 10px;
 }
-.margin-top-20{
+.margin-top-20 {
 	margin-top: 20px;
 }
-.margin-bottom-20{
+.margin-bottom-20 {
 	margin-bottom: 20px;
+}
+.video-list {
+  background-color: $gray;
 }

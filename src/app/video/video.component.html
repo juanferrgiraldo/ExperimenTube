@@ -1,6 +1,6 @@
-<div class="container mainContainer">
-  <div class="row margin-top-20 margin-bottom-20">
-    <div class="col-xs-12 col-md-2" *ngFor="let video of searchVideoList">
+<div class="container main-container">
+  <div class="video-list row margin-top-20 margin-bottom-20">
+    <div [ngClass]="shouldMount ? 'col-xs-12 col-md-2' : 'col-xs-12 col-md-2 mr-auto'" *ngFor="let video of searchVideoList">
       <app-video-card [video]="video" (click)="setCurrentVideo(video)"></app-video-card>
     </div>
   </div>
