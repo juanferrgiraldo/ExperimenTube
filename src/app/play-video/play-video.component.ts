@@ -15,6 +15,8 @@ export class PlayVideoComponent implements OnInit, OnChanges {
     this.url = this.baseUrl + this.video.id.videoId + '?autoplay=1';
   }
 
+  /** The ngOnChanges and ngOnInit lifecycle hooks
+   * are used to reload only this component*/
   ngOnChanges(changes: SimpleChanges) {
     this.ngOnInit();
   }

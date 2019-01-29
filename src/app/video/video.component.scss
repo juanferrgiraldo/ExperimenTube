@@ -1,14 +1,23 @@
 @import '../../styles/var';
 
 .main-container {
-	padding-top: 10px;
+  padding-top: 10px;
+  font-family: $font-family; 
+  
+  .title {
+    color: $green;
+    font-size: 40px;
+  }
+  
+  .information {
+    color: $gray;
+    font-size: 40px;
+  }
 }
-.margin-top-20 {
-	margin-top: 20px;
-}
-.margin-bottom-20 {
-	margin-bottom: 20px;
-}
+
 .video-list {
   background-color: $gray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }

@@ -17,6 +17,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**This functon calls the 'searchService'
+   * and get the @returns results
+   * to list in @Component video */
   searchVideo() {
     this.haveSearched = true;
     this.searchService.searchVideo(this.searchField).subscribe(

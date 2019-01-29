@@ -1,20 +1,25 @@
-<nav class="main_navbar navbar navbar-expand-sm">
-  <button class="navbar-toggler mt-3" data-toggle="collapse" data-target="#navbarMenu">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand mx-3" routerLink="/"> 
-    <img src="../../assets/experimenTube2.png" width="70" height="40" alt="main-logo"> ExperimenTube
-  </a>
-  <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarMenu">
-    <form class="form-inline">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search video" aria-label="Search" [(ngModel)]="searchField" name="search">      
-      <button class="btn searchButton"><fa-icon class="searchIcon" [icon]="faSearch" (click)="searchVideo()"></fa-icon></button>
-    </form>
+<div class="">
+  <nav class="navbar">   
+    <!--This is a developer proposal for logo and project name -->
+    <a class="navbar-brand mx-3" routerLink="/"> 
+      <img src="../../assets/experimenTube.png" width="70" height="40" alt="main-logo"> ExperimenTube
+    </a>
+    <!--But here are the original logo and name project
+    <a class="navbar-brand mx-3" routerLink="/"> 
+      <img src="../../assets/experimentality.png" width="60" height="40" alt="main-logo"> Experimentality
+    </a>
+    -->
+    <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarMenu">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search video" aria-label="Search" [(ngModel)]="searchField" name="search">      
+        <button class="btn searchButton"><fa-icon class="searchIcon" [icon]="faSearch" (click)="searchVideo()"></fa-icon></button>
+      </form>
+    </div>
+  </nav>
+  <div *ngIf="haveSearched">
+    <app-video [shouldMount]="haveSearched" [searchVideoList]="videoList"></app-video>
   </div>
-</nav>
-<div *ngIf="haveSearched">
-  <app-video [shouldMount]="haveSearched" [searchVideoList]="videoList"></app-video>
-</div>
-<div *ngIf="!haveSearched">
-  <app-video [shouldMount]="haveSearched"></app-video>
+  <div *ngIf="!haveSearched">
+    <app-video [shouldMount]="haveSearched"></app-video>
+  </div>
 </div>

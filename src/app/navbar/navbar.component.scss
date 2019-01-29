@@ -2,6 +2,7 @@
 
 .navbar {
   background-color: $light-green;
+  display: -webkit-box;
   margin-left: 10px;
   margin-right: 10px;
   font-family: $font-family;
@@ -24,5 +25,11 @@
     border-style: solid;
     border-color: $green;
     color: $gray;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar {
+    display: -webkit-inline-box;
   }
 }
