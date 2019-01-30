@@ -1,0 +1,82 @@
+@import '../../styles/var';
+
+.play-video {
+  display: flex;
+  flex-flow: nowrap;
+
+  .video-container {
+    margin-top: 10px;
+    border-radius: 2%;
+    flex: 60%;
+  
+    .player {
+      height: 390px;
+      width: 640px;
+    }
+  }
+
+  .text-container {
+    flex: 40%;
+    max-width: 40%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: auto;
+  
+    .title {
+      flex-wrap: wrap;
+      color: $green;
+      display: inline;
+      margin: 5px;
+      font-size: 30px;
+    }
+    
+    .description {
+      flex-wrap: wrap;
+      height: 70px;
+      text-align: justify;
+      max-width: 450px;
+      margin: 5px;
+      font-size: 20px; 
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .play-video {
+    flex-flow: wrap;
+
+    .video-container {
+      flex: 100%;
+      margin-left: 5px;
+      margin-right: 5px;
+  
+      .player {
+        height: 190px;
+        width: 390px;
+      }
+    }
+  
+    .text-container {
+      flex: 100%;
+      max-width: 100%;
+      position: relative;
+      padding-left: 5px;
+      padding-right: 5px;
+      justify-content: center;
+
+      .title {
+        display: inline;
+        margin: 10px;
+        font-size: 24px !important; 
+      }
+      
+      .description {
+        height: 70px;
+        margin: 10px;
+        font-size: 15px;  
+      }
+    }    
+  }
+  
+}

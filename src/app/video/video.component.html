@@ -1,0 +1,16 @@
+<div class="main-container">  
+    <p class="title">{{title}}</p>
+  <!--List of founded videos-->
+  <div class="video-list row">    
+    <div [ngClass]="shouldMount ? 'video-card' : 'video-card trending'" *ngFor="let video of searchVideoList">
+      <app-video-card [video]="video" (click)="setCurrentVideo(video)"></app-video-card>
+    </div>
+  </div>
+  <span class="information" *ngIf="!mountedVideo">Click over a video to play it!</span>
+  <!--Section where the playing video is shown-->
+  <div class="">
+    <div class="play-video" *ngIf="mountedVideo">
+      <app-play-video [video]="currentVideo"></app-play-video>
+    </div>
+  </div>  
+</div>

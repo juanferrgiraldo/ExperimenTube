@@ -1,0 +1,73 @@
+@import '../../styles/var';
+
+.main-container {
+  padding-top: 10px;
+  font-family: $font-family; 
+
+  .title {
+    color: $green;
+    font-size: 40px;
+  }
+  
+  .information {
+    color: $gray;
+    font-size: 40px;
+  }
+
+  .video-list {
+    display: flex;
+    background-color: $gray;
+    margin: 20px 10px;    
+    border-radius: 5px;
+  }
+
+  .video-card {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .trending {
+    margin-right: auto !important;
+  }
+  
+  .play-video {
+    display: flex;
+    flex-flow: nowrap;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .main-container {
+    padding-top: 5px;
+
+    .title {
+      font-size: 20px;
+    }
+
+    .information {
+      font-size: 20px;
+    }
+
+    .video-list {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      margin: 20px 5px;      
+    }
+
+    .video-card {
+      flex: 0 0 8.666663%;
+      max-width: 100%;
+      position: relative;
+      width: 100%;
+      padding-left: 9px;
+      padding-right: 8px;
+    }
+  }
+}

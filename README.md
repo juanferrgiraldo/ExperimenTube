@@ -1,5 +1,22 @@
 # ExperimenTube
 
+This project uses the [YouTube API](https://developers.google.com/youtube/documentation/) and lets
+the user search for any video without login in platform.
+
+At fist view, the web application will loads the five most popular videos in the platform and randomly
+will select a video to reproduce.
+
+![alt text](./src/assets/experimenTube1.png)
+
+Then, the user can search for a video and the application will display 6 videos of the search, and finally
+one of these videos must be clicked to reproduce it.
+
+![alt text](./src/assets/experimenTube3.png)
+
+The application is also responsive, and looks like this in mobiles:
+
+![alt text](./src/assets/experimenTube4.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
 ## Development server

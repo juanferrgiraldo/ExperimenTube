@@ -1,0 +1,48 @@
+@import '../../styles/var';
+
+.video-card {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: $green;
+  margin: 7px;
+  max-width: 300px;
+  height: auto;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.title {
+  font-family: $font-family;
+  height: 30px;
+  color: $white;
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+
+.picture {
+  margin: 12px 0px;
+  margin-bottom: 2px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .video-card {
+    border-width: 1px;
+    margin: 0px;
+    max-width: 50px;
+    max-height: 50px;
+  }
+  .title {
+    font-size: 6px;
+  }
+  .picture {
+    margin: 0px;
+    max-width: 50px;
+    max-height: 50px;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="play-video">
+  <!--Here is where the safe-url pipe is used to send the url and prevents XSS-->
+  <div class="video-container">
+    <iframe class="player" type="text/html" [src]="url | safeUrl: url" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="text-container">
+    <div class="title">
+      <p>{{video.snippet.title}}</p>
+    </div>
+    <br>   
+    <div class="description">
+      <p>{{video.snippet.description}}</p>
+    </div>    
+  </div>
+</div>
