@@ -9,9 +9,9 @@
       <img src="../../assets/experimentality.png" width="60" height="40" alt="main-logo"> Experimentality
     </a>
     -->
-    <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarMenu">
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search video" aria-label="Search" [(ngModel)]="searchField" name="search">      
+    <div class="searchBar">
+      <form>
+        <input class="searchArea mr-2" type="search" placeholder="Search video" aria-label="Search" [(ngModel)]="searchField" name="search">      
         <button class="btn searchButton"><fa-icon class="searchIcon" [icon]="faSearch" (click)="searchVideo()"></fa-icon></button>
       </form>
     </div>

@@ -18,5 +18,44 @@ hr {
 
   .title {
     font-weight: bold;
+    font-size: 16px;
+  }
+
+  .logo-experimentality {
+    width: 85px;
+    height: 65px;
+  }
+
+  .logo-cc {
+    width: 153px; 
+    height: 37px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  hr {
+    margin: 20px 15px;    
+    background-color: $green;
+    height: 1px;
+  }
+  
+  .footer-container {
+    margin-top: 30px;
+    margin-left: 10px;    
+  
+    .title {
+      font-size: 15px;
+    }
+  
+    .logo-experimentality {
+      width: 45px;
+      height: 35px;
+    }
+  
+    .logo-cc {
+      width: 80px; 
+      height: 22px;
+      margin-bottom: 5px;
+    }
   }
 }

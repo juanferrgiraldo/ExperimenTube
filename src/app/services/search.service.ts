@@ -7,7 +7,7 @@ export class SearchService {
   constructor (private httpClient: HttpClient) { }
 
   url = 'https://www.googleapis.com/youtube/v3/search';
-  apiKey = 'AIzaSyBBL-nYWjHmqlPOCnPa3UEJhn66S0mKeyo';
+  apiKey = 'AIzaSyC7XqLu8D3YNelLD7YXsHYZXsdugeHcf6M';
 
   searchVideo(video) {
     const params = new HttpParams().set('part', 'snippet').set('maxResults', '6').set('q', video).set('key', this.apiKey);

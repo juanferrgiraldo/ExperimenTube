@@ -1,24 +1,50 @@
 @import '../../styles/var';
 
-.container {
-  margin-top: 10px; 
-  font-family: $font-family;
-  
-  .description {
-    height: 70px;
-    text-align: justify;
-    max-width: 450px;
-    margin-left: 5px;    
-  }
-
-  .title {
-    color: $green;
-    display: inline;    
-  }
+.title {
+  color: $green;
+  display: inline;
+  margin: 5px;
+  font-size: 30px;
 }
 
+.description {
+  height: 70px;
+  text-align: justify;
+  max-width: 450px;
+  margin: 5px;
+  font-size: 20px;   
+}
 
 .video-container {
   margin-top: 10px;
   border-radius: 2%;
+  
+  .player {
+    height: 390px;
+    width: 640px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .video-container {
+    margin-left: 5px;
+    margin-right: 5px;
+
+    .player {
+      height: 190px;
+      width: 390px;
+    }
+  }
+
+  .title {
+    display: inline;
+    margin: 10px;
+    font-size: 24px !important; 
+  }
+  
+  .description {
+    height: 70px;
+    margin: 10px;
+    font-size: 15px;  
+  }
 }

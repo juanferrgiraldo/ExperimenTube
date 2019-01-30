@@ -2,7 +2,8 @@
 
 .navbar {
   background-color: $light-green;
-  display: -webkit-box;
+  display: flex;
+  flex-flow: row wrap;
   margin-left: 10px;
   margin-right: 10px;
   font-family: $font-family;
@@ -15,21 +16,29 @@
   }
 }
 
-.searchButton {
-  border-radius: 6px;
-  background-color: $white;
-  color: $green;
-  &:hover {
-    cursor: pointer;
-    background-color: $white !important;
-    border-style: solid;
-    border-color: $green;
-    color: $gray;
+.searchBar {
+  flex-wrap: nowrap;  
+  .searchArea {
+    border-radius: 6px;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+  }  
+  .searchButton {
+    border-radius: 6px;
+    background-color: $white;
+    color: $green;
+    &:hover {
+      cursor: pointer;
+      background-color: $white !important;
+      border-style: solid;
+      border-color: $green;
+      color: $gray;
+    }
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .navbar {
-    display: -webkit-inline-box;
+    justify-content: center;
   }
 }

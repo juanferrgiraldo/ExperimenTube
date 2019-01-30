@@ -1,11 +1,11 @@
 <div class="row">
   <!--Here is where the safe-url pipe is used to send the url and prevents XSS-->
-  <div class="video-container col-xs-12 col-md-7">
-    <iframe id="player" type="text/html" width="640" height="390" [src]="url | safeUrl: url" frameborder="0" allowfullscreen></iframe>
+  <div class="video-container col-sm-12 col-md-7">
+    <iframe class="player" type="text/html" [src]="url | safeUrl: url" frameborder="0" allowfullscreen></iframe>
   </div>
-  <div class="container col-xs-12 col-md-5">
-    <div class="row title">
-      <h3>{{video.snippet.title}}</h3>
+  <div class="col-sm-12 col-md-5">
+    <div class="title row">
+      <p>{{video.snippet.title}}</p>
     </div>
     <br>   
     <div class="row description">
