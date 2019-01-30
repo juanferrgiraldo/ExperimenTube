@@ -36,8 +36,7 @@
   
   .play-video {
     display: flex;
-    flex: 100%;
-    max-width: 100%;
+    flex-flow: nowrap;
     padding-left: 15px;
     padding-right: 15px;
   }

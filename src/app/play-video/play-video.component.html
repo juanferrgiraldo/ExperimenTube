@@ -1,14 +1,14 @@
-<div class="row">
+<div class="play-video">
   <!--Here is where the safe-url pipe is used to send the url and prevents XSS-->
-  <div class="video-container col-sm-12 col-md-7">
+  <div class="video-container">
     <iframe class="player" type="text/html" [src]="url | safeUrl: url" frameborder="0" allowfullscreen></iframe>
   </div>
-  <div class="col-sm-12 col-md-5">
-    <div class="title row">
+  <div class="text-container">
+    <div class="title">
       <p>{{video.snippet.title}}</p>
     </div>
     <br>   
-    <div class="row description">
+    <div class="description">
       <p>{{video.snippet.description}}</p>
     </div>    
   </div>
